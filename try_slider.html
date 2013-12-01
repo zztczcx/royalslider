@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="royalslider.css"  rel="stylesheet">
+        <link href="rs-minimal-white.css" rel="stylesheet">
+        <link href="rs-default.css" rel="stylesheet">
+        <link href="reset.css"  rel="stylesheet">
+
+        <script src="jquery.js" type="text/javascript"></script>
+        <script src="jquery-slider.js"></script>
+<style>
+.royalSlider {
+  width: 100%;
+}
+@media screen and (min-width:960px) and (min-height:660px) {
+  .heroSlider .rsOverflow,
+  .royalSlider.heroSlider {
+      height: 520px !important;
+  }
+}
+
+@media screen and (min-width:960px) and (min-height:1000px) {
+    .heroSlider .rsOverflow,
+    .royalSlider.heroSlider {
+        height: 660px !important;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 800px) {
+  .royalSlider.heroSlider,
+  .royalSlider.heroSlider .rsOverflow {
+    height: 300px !important;
+  }
+}
+</style>
+    </head>
+
+
+    <body>
+        <div class="royalSlider rsMinW">
+
+            <!-- lazy loaded image-->
+            <a class="rsImg" href="4.jpg">image description</a>
+
+            <!-- image and content -->
+            <div>
+                <p>Some content after...</p>
+                <img class="rsImg" src="1.jpg" data-rsVideo="https://vimeo.com/44878206" />
+            </div>
+
+            <!-- HTML content -->
+            <div>
+                Put any HTML content here
+                <img src="2.jpg">
+            </div>
+
+            <!-- HTML content (100% with and height) -->
+            <div class="rsContent">
+                Put any HTML content here
+                <img src="3.jpg">
+            </div>
+        </div>  
+
+<script>
+    jQuery(document).ready(function($) {
+        $(".royalSlider").royalSlider({
+            // options go here
+            // as an example, enable keyboard arrows nav
+            autoScaleSlider:true,
+            keyboardNavEnabled: true,
+            loop: true,
+            addActiveClass:true,
+            arrowsNav: false,
+            transitionType: "fade",
+            controlNavigation: 'bullets',
+            autoPlay:{
+                enabled: false, 
+                pauseOnHover: true,
+                delay: 600,
+            }
+        });  
+    });
+</script>
+
+    </body>
+</html>
